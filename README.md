@@ -21,6 +21,7 @@ Follow these steps to use the scripts:
     fprintf(file, "%.8f, ", time_end - time_start);
     fclose(file);
     ```
+    Here time_start and time_end should be the times messured at the start/end of your programm execution.
 
 4. Adjust the settings (`NUM_THREADS`, `BASE_PROBLEM_SIZE`, `PROBLEM_DIMENSIONS`, `NUM_REPS`) at the top of the bash scripts to match your requirements.
 
