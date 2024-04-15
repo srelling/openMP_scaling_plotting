@@ -23,8 +23,22 @@ Follow these steps to use the scripts:
     ```
     Here time_start and time_end should be the times messured at the start/end of your programm execution.
 
-4. Adjust the settings (`NUM_THREADS`, `BASE_PROBLEM_SIZE`, `PROBLEM_DIMENSIONS`, `NUM_REPS`) at the top of the bash scripts to match your requirements.
+4. Adjust the settings at the top of the bash scripts to match your requirements.
 
-5. Run the scripts using the `sbatch` command. Use `sbatch run_strong_scaling.sh` for strong scaling and `sbatch run_weak_scaling.sh` for weak scaling.
+    ```python
+    # Settings for Benchmarking
+    NUM_THREADS=(1 4 16 64)
+    BASE_PROBLEM_SIZES=(64 128 256)
+    NUM_REPS=5
+    PROBLEM_DIMENSIONS=2
+    
+    # Settings for Plot
+    ERROR_BARS=1
+    CONNECT_POINTS=0
+    FIT_GUSTAFSON=1
+    PLOT_IDEAL=1
+    ```
+
+6. Run the scripts using the `sbatch` command. Use `sbatch run_strong_scaling.sh` for strong scaling and `sbatch run_weak_scaling.sh` for weak scaling.
 
 Please note that these scripts are designed to be run on a system with the Slurm workload manager installed. If you're using a different workload manager, you may need to adjust the scripts accordingly.
