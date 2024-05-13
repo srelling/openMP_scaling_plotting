@@ -18,7 +18,7 @@ Follow these steps to use the scripts:
       printf("Error opening file!\n");
       return 1;
     }
-    fprintf(file, "%.8f, ", time_end - time_start);
+    fprintf(file, "%.8f", time_end - time_start);
     fclose(file);
     ```
     Here time_start and time_end should be the times messured at the start/end of your programm execution.
